@@ -1,3 +1,9 @@
 [submodule "Assets/Line Endings Fixer"]
 	path = Assets/Line Endings Fixer
 	url = https://github.com/WoLfulus/Unity-LineEndingFixer.git
+[submodule "Assets/SUCC"]
+	path = Assets/SUCC
+	url = https://github.com/JimmyCushnie/SUCC.git
+[submodule "Assets/Command Terminal Plus"]
+	path = Assets/Command Terminal Plus
+	url = https://github.com/JimmyCushnie/Command-Terminal-Plus.git
