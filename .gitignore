@@ -44,3 +44,6 @@ Game/
 
 # my preferred builds folder
 _builds/
+
+# incremental compiler logs
+Logs/
