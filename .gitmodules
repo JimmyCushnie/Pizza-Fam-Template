@@ -1,6 +1,3 @@
-[submodule "Assets/Line Endings Fixer"]
-	path = Assets/Line Endings Fixer
-	url = https://github.com/WoLfulus/Unity-LineEndingFixer.git
 [submodule "Assets/SUCC"]
 	path = Assets/SUCC
 	url = https://github.com/JimmyCushnie/SUCC.git

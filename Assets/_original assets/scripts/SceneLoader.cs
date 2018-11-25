@@ -38,6 +38,7 @@ namespace PizzaFam
 
         public static void LoadCutscene(bool start)
         {
+            MusicPlayer.Stop();
             throw new System.NotImplementedException();
         }
 
