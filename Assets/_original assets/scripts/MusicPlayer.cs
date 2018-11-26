@@ -51,7 +51,8 @@ namespace PizzaFam
 
         public static void Stop()
         {
-            Instance?.Source.Stop();
+            if (Instance == null || Instance.Source == null) return;
+            Instance.Source.Stop();
         }
 
         public static void FadeOut(float duration)
