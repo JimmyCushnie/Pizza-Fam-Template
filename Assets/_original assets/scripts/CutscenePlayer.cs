@@ -14,6 +14,11 @@ namespace PizzaFam {
 
         public Canvas PauseMenu;
 
+        private void Awake()
+        {
+            PauseMenu.enabled = false;
+        }
+
         void Start()
         {
             video = GetComponent<VideoPlayer>();
