@@ -27,6 +27,13 @@ namespace PizzaFam
             SceneManager.LoadScene("main menu");
         }
 
+        public static void LoadCutscene(bool start)
+        {
+            MusicPlayer.Stop();
+            CutscenePlayer.StartingCutscene = start;
+            SceneManager.LoadScene("cutscene");
+        }
+
         public static void LoadLevel(int level)
         {
             if (level > HighestReachedLevel) HighestReachedLevel = level;
@@ -36,10 +43,9 @@ namespace PizzaFam
             SceneManager.LoadScene("GameplayUI", LoadSceneMode.Additive);
         }
 
-        public static void LoadCutscene(bool start)
+        public static void LoadEndGame()
         {
-            MusicPlayer.Stop();
-            throw new System.NotImplementedException();
+            SceneManager.LoadScene("endgame");
         }
 
 
@@ -52,5 +58,8 @@ namespace PizzaFam
 
         [RegisterCommand(Name = "Load.Cutscene", MinArgCount = 1, MaxArgCount = 1)]
         private static void CommandLoadCutscene(CommandArg[] args) => LoadCutscene(args[0].Bool);
+
+        [RegisterCommand(Name = "Load.endgame", MaxArgCount = 0)]
+        private static void CommandLoadEnd(CommandArg[] args) => LoadEndGame();
     }
 }

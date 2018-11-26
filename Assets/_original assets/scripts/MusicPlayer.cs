@@ -55,21 +55,28 @@ namespace PizzaFam
         }
 
         public static void FadeOut(float duration)
-        {
+            =>
             Instance.StartCoroutine(Instance.FadeOutRoutine(duration));
-        }
+
+        public static void FadeIn(float duration)
+            => Instance.StartCoroutine(Instance.FadeInRoutine(duration));
 
         private IEnumerator FadeOutRoutine(float duration)
         {
-            float previousVolume = Source.volume;
             while(Source.volume > 0)
             {
-                Source.volume -= (previousVolume / duration) * Time.deltaTime;
+                Source.volume -= (1 / duration) * Time.deltaTime;
                 yield return new WaitForEndOfFrame();
             }
+        }
 
-            Source.Stop();
-            Source.volume = previousVolume;
+        private IEnumerator FadeInRoutine(float duration)
+        {
+            while (Source.volume < 1)
+            {
+                Source.volume += (1 / duration) * Time.deltaTime;
+                yield return new WaitForEndOfFrame();
+            }
         }
 
         private static void Restart()
@@ -93,7 +100,10 @@ namespace PizzaFam
         [RegisterCommand(Name = "Music.Seek", MinArgCount = 1, MaxArgCount = 1)]
         private static void CommandSeek(CommandArg[] args) => Seek(args[0].Float);
 
-        [RegisterCommand(Name = "Music.Fade", MinArgCount = 1, MaxArgCount = 1)]
-        private static void CommandFade(CommandArg[] args) => FadeOut(args[0].Float);
+        [RegisterCommand(Name = "Music.FadeOut", MinArgCount = 1, MaxArgCount = 1)]
+        private static void CommandFadeOut(CommandArg[] args) => FadeOut(args[0].Float);
+
+        [RegisterCommand(Name = "Music.FadeIn", MinArgCount = 1, MaxArgCount = 1)]
+        private static void CommandFadeIn(CommandArg[] args) => FadeIn(args[0].Float);
     }
 }
