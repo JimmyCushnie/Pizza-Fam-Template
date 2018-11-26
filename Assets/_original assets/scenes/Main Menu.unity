@@ -219,6 +219,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MusicType: 0
+  LoopStartTime: 5.55
+  LoopEndTime: 22.8
   Source: {fileID: 740271355}
 --- !u!4 &740271354
 Transform:
@@ -243,8 +245,8 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 243192711150359328, guid: d94f8213bd5664c41b948f73a3c773eb,
     type: 2}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: a6c32f49cb01ae74da47c2a72f89d892, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

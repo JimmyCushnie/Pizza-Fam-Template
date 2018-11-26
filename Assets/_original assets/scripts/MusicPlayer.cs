@@ -12,8 +12,8 @@ namespace PizzaFam
         public enum type { MainMenu, Gameplay }
 
         public type MusicType;
-        float LoopStartTime;
-        float LoopEndTime;
+        public float LoopStartTime;
+        public float LoopEndTime;
 
         private void Awake()
         {
