@@ -17,17 +17,12 @@ namespace PizzaFam
 
         private void Awake()
         {
-            if (Instance == null)
+            if (Instance == null || Instance.MusicType != this.MusicType)
             {
                 Stop();
                 Instance = this;
                 Play();
-            }
-            else if (Instance.MusicType != this.MusicType)
-            {
-                Stop();
-                Instance = this;
-                Play();
+                DontDestroyOnLoad(this.gameObject);
             }
             else
             {
@@ -51,8 +46,8 @@ namespace PizzaFam
 
         public static void Stop()
         {
-            if (Instance == null || Instance.Source == null) return;
-            Instance.Source.Stop();
+            if (Instance == null) return;
+            Destroy(Instance.gameObject);
         }
 
         public static void FadeOut(float duration)
