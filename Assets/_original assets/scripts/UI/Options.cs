@@ -22,7 +22,7 @@ namespace PizzaFam.UI
             return decibels;
         }
 
-        private void Awake()
+        private void Start()
         {
             MusicSlider.value = GameData.Get("MusicVolume", 0.7f);
             SFXSlider.value = GameData.Get("SFXVolume", 0.7f);
