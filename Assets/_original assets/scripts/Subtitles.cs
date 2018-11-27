@@ -14,7 +14,7 @@ namespace PizzaFam
             => Instance.SaySomething(text, duration);
 
         public static void Clear()
-            => Instance.SaySomething("", 0);
+            => Instance?.SaySomething("", 0);
 
         public static bool Enabled
         {
