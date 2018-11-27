@@ -1,0 +1,12 @@
+start scene:
+    0.583   : Once upon a time, there was Our Hero,
+    3.231   : and Our Hero was happy.
+    5.319   : But then, something bad happened,
+    7.833   : and Our Hero was no longer happy.
+    10.252  : So, they vowed to go on a journey
+    12.852  : and, uh, be happy again.
+    
+end scene:
+    0.684   : Our Hero completed their journey
+    2.717   : and they were happy again.
+    4.891   : The end.

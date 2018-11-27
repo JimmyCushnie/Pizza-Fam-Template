@@ -26,7 +26,7 @@ namespace PizzaFam.UI
         {
             MusicSlider.value = GameData.Get("MusicVolume", 0.7f);
             SFXSlider.value = GameData.Get("SFXVolume", 0.7f);
-            SubtitleToggle.isOn = GameData.Get("Subtitles", true);
+            SubtitleToggle.isOn = Subtitles.Enabled;
         }
 
         public void ChangeMusicVolume(float newVolume)
@@ -42,7 +42,7 @@ namespace PizzaFam.UI
 
         public void ToggleSubtitles()
         {
-            GameData.Set("Subtitles", SubtitleToggle.isOn);
+            Subtitles.Enabled = SubtitleToggle.isOn;
         }
     }
 }

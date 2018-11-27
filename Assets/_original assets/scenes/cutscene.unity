@@ -216,6 +216,7 @@ MonoBehaviour:
   EndAudio: {fileID: 8300000, guid: 4e11667f0d6639640b15f91d32c9361d, type: 3}
   StartVideoName: start.mp4
   EndVideoName: end.mp4
+  SubtitleToggle: {fileID: 943987910}
 --- !u!328 &217045391
 VideoPlayer:
   m_ObjectHideFlags: 0
@@ -930,8 +931,8 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 217045389}
-        m_MethodName: 
+      - m_Target: {fileID: 217045390}
+        m_MethodName: ToggleSubtitles
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

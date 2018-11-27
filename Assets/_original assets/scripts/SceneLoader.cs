@@ -25,10 +25,12 @@ namespace PizzaFam
         public static void LoadMainMenu()
         {
             SceneManager.LoadScene("main menu");
+            Subtitles.Clear();
         }
 
         public static void LoadCutscene(bool start)
         {
+            Subtitles.Clear();
             MusicPlayer.Stop();
             CutscenePlayer.StartingCutscene = start;
             SceneManager.LoadScene("cutscene");
@@ -38,6 +40,7 @@ namespace PizzaFam
         {
             if (level > HighestReachedLevel) HighestReachedLevel = level;
 
+            Subtitles.Clear();
             SceneManager.LoadScene("InEveryLevel");
             SceneManager.LoadScene("level" + level, LoadSceneMode.Additive);
             SceneManager.LoadScene("GameplayUI", LoadSceneMode.Additive);
@@ -45,6 +48,7 @@ namespace PizzaFam
 
         public static void LoadEndGame()
         {
+            Subtitles.Clear();
             SceneManager.LoadScene("endgame");
         }
 
