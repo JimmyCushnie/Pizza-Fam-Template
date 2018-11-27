@@ -29,9 +29,6 @@ namespace PizzaFam
 
             video.url = Path.Combine(Application.streamingAssetsPath, StartingCutscene ? StartVideoName : EndVideoName);
             audio.clip = StartingCutscene ? StartAudio : EndAudio;
-            video.Play();
-            audio.Play();
-
             video.loopPointReached += OnVideoEnd;
 
             string penis = Resources.Load<TextAsset>("subtitles").text;
@@ -44,6 +41,18 @@ namespace PizzaFam
             }
             SubtitleTimes = new List<float>(SubtitleData.Keys);
             SubtitleTimes.Sort();
+
+            StartCoroutine(PrepareThenPlay());
+        }
+
+        IEnumerator PrepareThenPlay()
+        {
+            video.Prepare();
+            while (!video.isPrepared)
+                yield return new WaitForEndOfFrame();
+
+            video.Play();
+            audio.Play();
         }
 
         public AudioClip StartAudio;
