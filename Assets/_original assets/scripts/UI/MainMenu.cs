@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace PizzaFam.UI {
+namespace PizzaFam.UI
+{
     public class MainMenu : MonoBehaviour
     {
         private void Awake()

@@ -13,13 +13,13 @@ namespace PizzaFam.UI
         {
             var UnlockedLevel = SceneLoader.HighestReachedLevel;
 
-            Transform level = transform.Find("1");
+            Transform level = transform.Find("background").Find("1");
             int i = 1;
             while(level != null)
             {
                 level.GetComponent<Button>().interactable = i <= UnlockedLevel;
                 i++;
-                level = transform.Find(i.ToString());
+                level = transform.Find("background").Find(i.ToString());
             }
         }
     }
