@@ -26,5 +26,13 @@ namespace PizzaFam
 
             Terminal.Log("");
         }
+
+        [RegisterCommand(Name = "GameData.location", MaxArgCount = 0)]
+        private static void PrintGameDataLocation(CommandArg[] args)
+            => Terminal.Log($"GameData.SUCC is located at {file.FilePath}");
+
+        [RegisterCommand(Name = "GameData.reload", MaxArgCount = 0)]
+        private static void ReloadGameData(CommandArg[] args)
+            => file.ReloadAllData();
     }
 }
