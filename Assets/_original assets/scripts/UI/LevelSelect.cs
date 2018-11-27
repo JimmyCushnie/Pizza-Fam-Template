@@ -15,10 +15,8 @@ namespace PizzaFam.UI
 
             Transform level = transform.Find("1");
             int i = 1;
-            Debug.Log(UnlockedLevel);
             while(level != null)
             {
-                Debug.Log(i);
                 level.GetComponent<Button>().interactable = i <= UnlockedLevel;
                 i++;
                 level = transform.Find(i.ToString());
