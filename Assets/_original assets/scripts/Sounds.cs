@@ -110,6 +110,7 @@ namespace PizzaFam
                 name = "HEY YOU ADD A NAME HERE";
                 VolumeScale = 1;
                 ChanceOfPlaying = 1;
+                RandomClips = new ClipWithSubtitle[1];
             }
 
             [Serializable]
