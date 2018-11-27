@@ -37,8 +37,11 @@ namespace PizzaFam
             string penis = Resources.Load<TextAsset>("subtitles").text;
             string name = StartingCutscene ? "start scene" : "end scene";
             var node = SUCC.DataConverter.DataStructureFromPENIS(penis).Item2[name];
-            var data = SUCC.NodeManager.GetNodeData(node, typeof(Dictionary<float, string>));
-            SubtitleData = (Dictionary<float, string>)data;
+            foreach(var child in node.ChildNodes)
+            {
+                var heck = (SUCC.KeyNode)child;
+                SubtitleData.Add(float.Parse(heck.Key), heck.Value);
+            }
             SubtitleTimes = new List<float>(SubtitleData.Keys);
             SubtitleTimes.Sort();
         }
@@ -49,7 +52,7 @@ namespace PizzaFam
         public string StartVideoName = "start.mp4";
         public string EndVideoName = "end.mp4";
 
-        private Dictionary<float, string> SubtitleData;
+        private Dictionary<float, string> SubtitleData = new Dictionary<float, string>();
         private List<float> SubtitleTimes;
         private int nextTimeIndex = 0;
 

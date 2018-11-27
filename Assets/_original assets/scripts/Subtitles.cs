@@ -11,7 +11,7 @@ namespace PizzaFam
         public TextMeshProUGUI SubtitleOutput;
 
         public static void Say(string text, float duration)
-            => Instance.SaySomething(text, duration);
+            => Instance?.SaySomething(text, duration);
 
         public static void Clear()
             => Instance?.SaySomething("", 0);
