@@ -33,11 +33,17 @@ namespace PizzaFam.UI
         {
             Mixer.SetFloat("MusicVolume", PercentToDecibels(newVolume));
             GameData.Set("MusicVolume", newVolume);
+
+            if (Input.GetKey(KeyCode.LeftShift))
+                SFXSlider.value = newVolume;
         }
         public void ChangeSFXVolume(float newVolume)
         {
             Mixer.SetFloat("SFXVolume", PercentToDecibels(newVolume));
             GameData.Set("SFXVolume", newVolume);
+
+            if (Input.GetKey(KeyCode.LeftShift))
+                MusicSlider.value = newVolume;
         }
 
         public void ToggleSubtitles()
