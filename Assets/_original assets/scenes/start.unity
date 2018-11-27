@@ -161,7 +161,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -316,7 +316,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 0}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -513,7 +513,6 @@ GameObject:
   - component: {fileID: 1210254564}
   - component: {fileID: 1210254568}
   - component: {fileID: 1210254567}
-  - component: {fileID: 1210254566}
   - component: {fileID: 1210254565}
   m_Layer: 0
   m_Name: subtitleCanvas
@@ -553,22 +552,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SubtitleOutput: {fileID: 102562418}
---- !u!114 &1210254566
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1210254563}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1301386320, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
 --- !u!114 &1210254567
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -620,7 +603,6 @@ GameObject:
   - component: {fileID: 1549560593}
   - component: {fileID: 1549560597}
   - component: {fileID: 1549560596}
-  - component: {fileID: 1549560595}
   - component: {fileID: 1549560594}
   m_Layer: 0
   m_Name: fadeCanvas
@@ -660,22 +642,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FadeImage: {fileID: 407864303}
---- !u!114 &1549560595
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1549560592}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1301386320, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
 --- !u!114 &1549560596
 MonoBehaviour:
   m_ObjectHideFlags: 0

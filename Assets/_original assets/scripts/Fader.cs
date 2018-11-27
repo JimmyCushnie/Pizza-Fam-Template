@@ -59,4 +59,11 @@ public class Fader : MonoBehaviour
 
     [RegisterCommand(Name = "Fade.In", MinArgCount = 1, MaxArgCount = 1)]
     private static void FadeInCommand(CommandArg[] args) => FadeIn(args[0].Float, Color.white, null);
+
+    [RegisterCommand(Name = "Fade.OutAndIn", MinArgCount = 1, MaxArgCount = 1)]
+    private static void FadeOutInCommand(CommandArg[] args)
+    {
+        var duration = args[0].Float;
+        FadeOut(duration, Color.white, () => { FadeIn(duration, Color.white); });
+    }
 }

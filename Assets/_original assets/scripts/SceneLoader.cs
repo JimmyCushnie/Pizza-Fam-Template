@@ -28,12 +28,16 @@ namespace PizzaFam
             Subtitles.Clear();
         }
 
-        public static void LoadCutscene(bool start)
+        public static void LoadCutscene(bool start, float fadeDuration = 1)
         {
-            Subtitles.Clear();
-            MusicPlayer.Stop();
-            CutscenePlayer.StartingCutscene = start;
-            SceneManager.LoadScene("cutscene");
+            MusicPlayer.FadeOut(fadeDuration);
+            Fader.FadeOut(fadeDuration, Color.black, () =>
+            {
+                Subtitles.Clear();
+                MusicPlayer.Stop();
+                CutscenePlayer.StartingCutscene = start;
+                SceneManager.LoadScene("cutscene");
+            });
         }
 
         public static void LoadLevel(int level)
