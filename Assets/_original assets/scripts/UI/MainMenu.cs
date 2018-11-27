@@ -48,6 +48,12 @@ namespace PizzaFam.UI
             AboutCanvas.enabled = true;
         }
 
+        private void Update()
+        {
+            if (Input.GetButtonDown("Cancel"))
+                ShowMain();
+        }
+
 
 
         public void NewGame() => SceneLoader.LoadCutscene(start: true);
