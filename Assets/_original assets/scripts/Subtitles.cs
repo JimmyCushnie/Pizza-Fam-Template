@@ -31,11 +31,11 @@ namespace PizzaFam
 
         private void SaySomething(string text, float duration)
         {
-            if (!enabled) return;
-
             SubtitleOutput.text = text;
             TimeUntilFade = duration;
-            SubtitleOutput.enabled = true;
+
+            if (enabled)
+                SubtitleOutput.enabled = true;
         }
 
         float TimeUntilFade = 0;
