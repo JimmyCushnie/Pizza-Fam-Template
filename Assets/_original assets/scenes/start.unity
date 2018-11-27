@@ -821,21 +821,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SoundsSource: {fileID: 2008047896}
-  SoundList:
-  - name: click
-    clip: {fileID: 0}
-    MaxPitchVariation: 0.3
-    VolumeScale: 1.2
-  - name: penis
-    clip: {fileID: 0}
-    MaxPitchVariation: 69
-    VolumeScale: 6969
-  VoiceList:
-  - name: HEY YOU ADD A NAME HERE
-    RandomClips:
-    - audio: {fileID: 0}
-      subtitle: 
-    VolumeScale: 1
-    ChanceOfPlaying: 1
-  SoundIndexesDefaulted: 0101
-  VoiceIndexesDefaulted: 01
+  SoundList: []
+  VoiceList: []
+  SoundIndexesDefaulted: 
+  VoiceIndexesDefaulted: 
