@@ -8,12 +8,25 @@ namespace PizzaFam
 {
     public class SceneLoader : MonoBehaviour
     {
+        public static int CurrentLevel { get; private set; }
+        public static int LevelCount { get
+            {
+                int i = 1;
+                while (Application.CanStreamedLevelBeLoaded("level" + i))
+                    i++;
+                return i - 1;
+            } }
+
         private void Awake()
         {
             DontDestroyOnLoad(this.gameObject);
 
             if (SceneManager.sceneCount == 1) // so you can have this scene open while working on a level or whatnot
                 LoadMainMenu();
+            else 
+                for(int i = 1; i < LevelCount; i++)
+                    if (SceneManager.GetSceneByName("level" + i).isLoaded)
+                        CurrentLevel = i;
         }
 
         public static int HighestReachedLevel
@@ -31,7 +44,7 @@ namespace PizzaFam
         public static void LoadCutscene(bool start, float fadeDuration = 1)
         {
             MusicPlayer.FadeOut(fadeDuration);
-            Fader.FadeOut(fadeDuration, Color.black, () =>
+            Fader.FadeOut(fadeDuration, Color.black, onComplete: () =>
             {
                 Subtitles.Clear();
                 MusicPlayer.Stop();
@@ -48,6 +61,7 @@ namespace PizzaFam
             SceneManager.LoadScene("InEveryLevel");
             SceneManager.LoadScene("level" + level, LoadSceneMode.Additive);
             SceneManager.LoadScene("GameplayUI", LoadSceneMode.Additive);
+            CurrentLevel = level;
         }
 
         public static void LoadEndGame()

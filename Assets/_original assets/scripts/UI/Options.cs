@@ -46,9 +46,9 @@ namespace PizzaFam.UI
                 MusicSlider.value = newVolume;
         }
 
-        public void ToggleSubtitles()
+        public void ToggleSubtitles(bool on)
         {
-            Subtitles.Enabled = SubtitleToggle.isOn;
+            Subtitles.Enabled = on;
         }
     }
 }
