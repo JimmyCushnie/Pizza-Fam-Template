@@ -22,7 +22,11 @@ namespace PizzaFam
         private void Play(Sound sound)
         {
             SoundsSource.pitch = Random.Range(1 - sound.MaxPitchVariation, 1 + sound.MaxPitchVariation);
-            SoundsSource.PlayOneShot(sound.RandomClips.RandomItem(), sound.VolumeScale);
+            var clip = sound.RandomClips.RandomItem();
+            SoundsSource.PlayOneShot(clip.audio, sound.VolumeScale);
+
+            if (!clip.subtitle.IsNullOrEmpty())
+                Subtitles.Say(clip.subtitle, clip.audio.length);
         }
 
 
@@ -53,8 +57,15 @@ namespace PizzaFam
         [Serializable]
         private class Sound
         {
+            [Serializable]
+            public class ClipWithSubtitle
+            {
+                public AudioClip audio;
+                public string subtitle;
+            }
+
             public string name = "HEY YOU ADD A SOUND NAME HERE";
-            public AudioClip[] RandomClips = new AudioClip[1];
+            public ClipWithSubtitle[] RandomClips = new ClipWithSubtitle[1];
 
             public float MaxPitchVariation = 0;
             public float VolumeScale = 1;

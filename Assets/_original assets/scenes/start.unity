@@ -314,12 +314,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SoundsSource: {fileID: 538026733}
-  SoundList:
-  - name: HEY YOU ADD A SOUND NAME HERE
-    RandomClips:
-    - {fileID: 0}
-    MaxPitchVariation: 0
-    VolumeScale: 1
+  SoundList: []
 --- !u!114 &538026731
 MonoBehaviour:
   m_ObjectHideFlags: 0
