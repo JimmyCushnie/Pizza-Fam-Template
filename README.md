@@ -33,7 +33,7 @@ Features of this template:
 * music player system
   * intro that leads into a loop without skipping
     
-Importantly, all of the above features are cleared to work on Windows, Mac OS, Linux, and WebGL.
+All of the above features work on both Windows and WebGL. I'd like to verify for Mac OS and Linux in the future.
   
 To my knowledge, this is all within the [Ludum Dare rules](https://ldjam.com/events/ludum-dare/rules):
 
