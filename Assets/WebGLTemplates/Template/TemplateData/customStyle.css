@@ -1,0 +1,72 @@
+/* Scalable canvas */
+
+* {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+div.fullWidth {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+div.fullWidth canvas {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: #2B2F37;
+  width: 100%;
+  height: 100%;
+}
+
+
+/* Logo */
+
+div#loadingBox {
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  top: 50%;
+  margin-top: -10px;
+  text-align: center;
+}
+
+/* for whatever reason, the image displays correctly in chrome, but in all other browsers it doesn't display and shows an error.
+I'm cutting the image for now. Anyone in the future working on this, this post might help you: https://stackoverflow.com/questions/17907833/content-url-does-not-display-image-on-firefox-browser?answertab=oldest#tab-top
+I was actually able to get the image to display by adding ::after, but I couldn't get it to align properly.
+img#logo {
+  height: calc(100% - 25px);
+  content:url("logo.png");
+}
+*/
+
+
+/* Progress bar */
+
+div#bgBar {
+  position: absolute;
+  width: 400px;
+  margin-left: -200px;
+  left: 50%;
+  height: 20px;
+  display: block;
+  background-color: #333;
+}
+
+div#progressBar {
+  left: 50%;
+  position: absolute;
+  margin-left: -200px;
+  width: 0px;
+  height: 20px;
+  background-color: #2796C4;
+  border-radius: 2px;
+}
+
+div#bgBar {
+  border-radius: 2px;
+}

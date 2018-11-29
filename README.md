@@ -32,6 +32,9 @@ Features of this template:
   * supports volume scaling
 * music player system
   * intro that leads into a loop without skipping
+* WebGL build template
+  * custom loading bar
+  * auto-adjusting resolution
     
 All of the above features work on both Windows and WebGL. I'd like to verify for Mac OS and Linux in the future.
   
