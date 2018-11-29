@@ -28,21 +28,16 @@ body {
 
 div#loadingBox {
   width: 100%;
-  height: 100px;
+  height: 1100px;
   position: absolute;
-  top: 50%;
+  top: 0%;
   margin-top: -10px;
   text-align: center;
 }
 
-/* for whatever reason, the image displays correctly in chrome, but in all other browsers it doesn't display and shows an error.
-I'm cutting the image for now. Anyone in the future working on this, this post might help you: https://stackoverflow.com/questions/17907833/content-url-does-not-display-image-on-firefox-browser?answertab=oldest#tab-top
-I was actually able to get the image to display by adding ::after, but I couldn't get it to align properly.
-img#logo {
-  height: calc(100% - 25px);
+img#logo::after {
   content:url("logo.png");
 }
-*/
 
 
 /* Progress bar */

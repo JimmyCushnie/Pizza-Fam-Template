@@ -69,8 +69,8 @@ p.footer {
 }
 
 div.logo {
-    width: 204px;
-    height: 38px;
+    width: 512px;
+    height: 512px;
     float: left;
     background: url(logo.png) 0 0 no-repeat;
     position: relative;

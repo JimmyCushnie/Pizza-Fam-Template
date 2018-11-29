@@ -34,6 +34,7 @@ Features of this template:
   * intro that leads into a loop without skipping
 * WebGL build template
   * custom loading bar
+  * cusom image to display above the loading bar
   * auto-adjusting resolution
     
 All of the above features work on both Windows and WebGL. I'd like to verify for Mac OS and Linux in the future.
