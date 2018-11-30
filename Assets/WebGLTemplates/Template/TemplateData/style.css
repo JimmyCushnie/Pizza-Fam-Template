@@ -68,16 +68,6 @@ p.footer {
     display: none;
 }
 
-div.logo {
-    width: 512px;
-    height: 512px;
-    float: left;
-    background: url(logo.png) 0 0 no-repeat;
-    position: relative;
-    z-index: 10;
-}
-
-
 
 .template-wrap {
     position: absolute;

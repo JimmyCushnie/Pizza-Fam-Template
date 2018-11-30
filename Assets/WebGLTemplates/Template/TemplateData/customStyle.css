@@ -28,25 +28,31 @@ body {
 
 div#loadingBox {
   width: 100%;
-  height: 1100px;
+  height: 100%;
   position: absolute;
   top: 0%;
   margin-top: -10px;
   text-align: center;
 }
 
-img#logo::after {
-  content:url("logo.png");
+img#logo {
+  background-image: url('logo.png');
+  width: 512px;
+  height: 512px;
+  position: absolute;
+  margin-left: -256px;
+  margin-top: 100px;
 }
 
 
 /* Progress bar */
 
 div#bgBar {
+  left: 50%;
   position: absolute;
   width: 400px;
   margin-left: -200px;
-  left: 50%;
+  margin-top: 650px;
   height: 20px;
   display: block;
   background-color: #333;
@@ -56,6 +62,7 @@ div#progressBar {
   left: 50%;
   position: absolute;
   margin-left: -200px;
+  margin-top: 650px;
   width: 0px;
   height: 20px;
   background-color: #2796C4;

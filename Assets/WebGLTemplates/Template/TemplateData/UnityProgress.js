@@ -26,7 +26,7 @@ function UnityProgress(gameInstance, progress) {
     gameInstance.loadingBox.appendChild(gameInstance.progressBar);
   }
 
-  var length = 200 * Math.min(progress, 1);
+  var length = 400 * Math.min(progress, 1);
   gameInstance.progressBar.style.width = length + "px";
   if (progress == 1) {
     gameInstance.loadingBox.style.display = "none";
