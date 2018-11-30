@@ -51,11 +51,16 @@ namespace PizzaFam
         }
 
         public static void FadeOut(float duration)
-            =>
-            Instance.StartCoroutine(Instance.FadeOutRoutine(duration));
+        {
+            if (Instance == null) return;
+            Instance?.StartCoroutine(Instance.FadeOutRoutine(duration));
+        }
 
         public static void FadeIn(float duration)
-            => Instance.StartCoroutine(Instance.FadeInRoutine(duration));
+        {
+            if (Instance == null) return;
+            Instance?.StartCoroutine(Instance.FadeInRoutine(duration));
+        }
 
         private IEnumerator FadeOutRoutine(float duration)
         {

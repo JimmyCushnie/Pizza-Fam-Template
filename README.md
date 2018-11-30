@@ -32,7 +32,7 @@ Features of this template:
   * supports volume scaling
 * music player system
   * intro that leads into a loop without skipping
-* WebGL build template
+* WebGL build template (modified version of [this repo](https://github.com/poisins/WebGLCustomTemplate_U3D) by [@poisins](https://github.com/poisins))
   * custom loading bar
   * cusom image to display above the loading bar
   * auto-adjusting resolution

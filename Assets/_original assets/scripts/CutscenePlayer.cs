@@ -18,15 +18,15 @@ namespace PizzaFam
 
         private void Awake()
         {
+            video = GetComponent<VideoPlayer>();
+            audio = GetComponent<AudioSource>();
+
             SubtitleToggle.isOn = Subtitles.Enabled;
             PauseMenu.enabled = false;
         }
 
         void Start()
         {
-            video = GetComponent<VideoPlayer>();
-            audio = GetComponent<AudioSource>();
-
             video.url = Path.Combine(Application.streamingAssetsPath, StartingCutscene ? StartVideoName : EndVideoName);
             audio.clip = StartingCutscene ? StartAudio : EndAudio;
             video.loopPointReached += OnVideoEnd;
@@ -80,6 +80,7 @@ namespace PizzaFam
 
         public void OnVideoEnd(VideoPlayer source)
         {
+            video.targetTexture.Release(); // so that the next time a cutscene is played, it doesn't show the last frame of the previous cutscene. Also frees up RAM.
             if (StartingCutscene)
                 SceneLoader.LoadLevel(1);
             else
